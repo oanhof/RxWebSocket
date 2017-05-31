@@ -66,8 +66,6 @@ public class RxWebSocket: WebSocket {
         super.onText = { publish.onNext(.text($0)) }
         super.onData = { publish.onNext(.data($0)) }
         super.onPong = { publish.onNext(.pong($0)) }
-        
-        connect()
     }
 }
 
